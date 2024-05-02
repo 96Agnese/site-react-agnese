@@ -1,0 +1,128 @@
+@forward "mixins.scss";
+@forward "reset";
+@forward "variables.scss";
+@use "variables.scss" as variables;
+
+// VideoJS
+.vjs-loading-spinner {
+  display: none !important;
+}
+
+body {
+  background-color: white;
+  color: variables.$primary-color;
+  font-family: FuturaBook, Arial, sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h5 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.sub-head-1 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.body-1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.body-2 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.body-3 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.body-4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body-5 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.field-1 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.field-2 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.field-3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// #root {
+//   overflow-y: scroll;
+// }
+
+button {
+  font-family: FuturaBook, Arial, sans-serif;
+
+  .big {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .medium {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .small {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.text-bold {
+  font-family: FuturaBoldItalic, Arial, sans-serif;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.text-white {
+  color: white;
+}

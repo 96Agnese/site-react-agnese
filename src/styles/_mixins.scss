@@ -1,0 +1,194 @@
+@use "variables.scss" as styles;
+
+@mixin flex($direction: row, $justify-content: flex-start, $align-items: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin grid($columns: auto, $rows: auto, $gap: 0) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+@mixin grid($columns: auto, $rows: auto, $column-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+@mixin grid-repeat-cols($columns: 1, $column-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+@mixin grid-repeat-rows($rows: 1, $column-gap: 0, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($rows, 1fr);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+}
+
+@mixin above-breakpoint($breakpoint) {
+  @media (min-width: calc(map-get(styles.$breakpoints, $breakpoint) + 1px)) {
+    @content;
+  }
+}
+
+@mixin below-breakpoint($breakpoint) {
+  @media (max-width: map-get(styles.$breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin breakpoint($breakpoint, $dir: "above") {
+  @if map-has-key(styles.$breakpoints, $breakpoint) {
+    @if ($dir == "above") {
+      @include above-breakpoint($breakpoint) {
+        @content;
+      }
+    } @else if ($dir == "below") {
+      @include below-breakpoint($breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin hide-scrollbar {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@mixin bg-img($url) {
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin landing-spacing-inline($property: margin) {
+  #{$property}-inline: map-get($map: styles.$mx, $key: lg);
+
+  @include breakpoint(xl, below) {
+    #{$property}-inline: map-get($map: styles.$mx, $key: md);
+  }
+
+  @include breakpoint(small, below) {
+    #{$property}-inline: map-get($map: styles.$mx, $key: sm);
+  }
+}
+
+@mixin hideScrollbar() {
+  // Hide scrollbar
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin bottom-navbar-spacing {
+  @include breakpoint(medium, below) {
+    padding-bottom: 80px;
+  }
+}
+
+@mixin container {
+  width: auto;
+  margin-inline: map-get($map: styles.$container-marginX, $key: base);
+
+  @include breakpoint(large) {
+    margin-inline: map-get($map: styles.$container-marginX, $key: desktop);
+  }
+}
+
+@mixin landing-padding-inline() {
+  width: 100%;
+  padding-inline: map-get($map: styles.$container-marginX, $key: base);
+
+  @include breakpoint(large) {
+    padding-inline: map-get($map: styles.$container-marginX, $key: desktop);
+  }
+}
+
+@mixin grid-layout {
+  display: grid;
+  gap: 24px;
+  row-gap: 24px;
+  column-gap: 24px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include breakpoint(small) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@mixin nested-grid($cols) {
+  display: grid;
+  gap: 24px;
+  row-gap: 24px;
+  column-gap: 24px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(map-get($map: $cols, $key: base), 1fr);
+
+  @each $breakpoint, $value in styles.$breakpoints {
+    $breakpointCols: map-get($cols, $breakpoint);
+
+    @if $breakpointCols and $breakpointCols >0 and $value >0 {
+      @include breakpoint($breakpoint) {
+        grid-template-columns: repeat($breakpointCols, 1fr);
+      }
+    }
+  }
+}
+
+@mixin dynamic-viewport-min-height {
+  min-height: calc(100svh - map-get($map: styles.$header-height, $key: sm));
+
+  @include breakpoint(small) {
+    min-height: calc(100svh - map-get($map: styles.$header-height, $key: md));
+  }
+
+  @include breakpoint(large) {
+    min-height: calc(100svh - map-get($map: styles.$header-height, $key: lg));
+  }
+}
+
+@mixin dynamic-viewport-min-height-home-navbar {
+  min-height: calc(100svh - map-get($map: styles.$home-navbar-height, $key: sm));
+
+  @include breakpoint(small) {
+    min-height: calc(100svh - map-get($map: styles.$home-navbar-height, $key: md));
+  }
+
+  @include breakpoint(large) {
+    min-height: calc(100svh - map-get($map: styles.$home-navbar-height, $key: lg));
+  }
+}

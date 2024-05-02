@@ -1,0 +1,158 @@
+$inline-viewport-padding: (
+  header: 0.5rem,
+  content: (
+    desktop: 40px,
+    mobile: 1rem,
+  ),
+);
+
+$grays: (
+  white: hsl(0, 0%, 100%),
+  100: hsl(120, 5%, 96%),
+  200: hsl(0, 0%, 76%),
+  300: hsl(0, 0%, 59%),
+  400: hsl(0, 0%, 56%),
+  500: hsl(0, 0%, 36%),
+  600: hsl(0, 0%, 29%),
+  700: hsl(0, 0%, 26%),
+  800: hsl(0, 0%, 16%),
+  900: hsl(0, 0%, 13%),
+  black: hsl(0, 0%, 0%),
+);
+
+$primary: (
+  primary-light: hsl(209, 32%, 75%),
+  primary: hsl(208, 32%, 57%),
+);
+
+$green: (
+  green-dark: hsl(178, 10%, 49%),
+  green: hsl(180, 20%, 81%),
+  green-light: hsl(180, 20%, 92%),
+);
+
+$pink: (
+  pink-light: hsl(16, 33%, 91%),
+  pink: hsl(12, 34%, 86%),
+);
+
+$brown: (
+  brown-dark: hsl(2, 21%, 36%),
+  brown-light: hsl(18, 22%, 70%),
+);
+
+$gray-secondary: (
+  white: hsl(0, 0%, 100%),
+  black: hsl(0, 0%, 0%),
+  gray: hsl(0, 0%, 48%),
+  medium-gray: hsl(0, 0%, 84%),
+  light-gray: hsl(30, 6%, 93%),
+  hover-navbar: hsla(0, 0%, 100%, 0.2),
+  description-nutrition: hsla(240, 0%, 48%, 1),
+);
+
+$azure: (
+  azure: hsl(180, 12%, 97%),
+);
+
+$neutral: (
+  neutral: hsl(0, 0%, 13%),
+);
+
+$status: (
+  success: green,
+  warning: yellow,
+  danger: hsl(342, 100%, 44%),
+  error: hsl(342, 100%, 44%),
+);
+
+$theme: map-merge(
+  $map1: $grays,
+  $map2: $status,
+);
+
+// Body
+// DEPRECATED:
+$body-bg-color: map-get(
+  $map: $theme,
+  $key: black,
+);
+// DEPRECATED:
+$body-text-color: map-get(
+  $map: $theme,
+  $key: white,
+);
+
+$navbar-height: 40px;
+$navbar-logo-height: 4rem;
+$bottombar-height: 5rem;
+
+// DEPRECATED:
+$mx: (
+  lg: 6.75rem,
+  md: 3.75rem,
+  sm: 1.5rem,
+);
+$page-padding: (
+  lg: 6.75rem,
+  md: 3.75rem,
+  sm: 1.5rem,
+);
+$carousel-card-gap: 24px;
+$carousel-internal-padding: 3rem;
+$carousel-card-max-description-chars: 50ch;
+$carousel-card-max-description-lines: 2;
+$hero-card-max-description-chars: 100ch;
+$hero-card-max-description-lines: 2;
+
+$item-detail-max-description-chars: 100ch;
+$item-detail-max-description-lines: 4;
+
+$background-color: white;
+$primary-color: black;
+$accent-color: gold;
+
+$navbar-background-color: transparent;
+$bottombar-background-color: transparent;
+
+$interactive-bar-height: 100px;
+$interactive-bar-background-color: rgba(transparent, 0.3);
+$interactive-bar-button-dimension: 60px;
+$interactive-bar-button-dimension-small: 60px;
+$interactive-bar-timeline-dimension: 24px;
+$interactive-bar-timeline-dimension-small: 20px;
+$interactive-bar-timeline-slider-dimension: 8px;
+$interactive-bar-timeline-slider-dimension-small: 4px;
+
+$top-bar-video-height: 100px;
+$top-bar-video-background-color: rgba(transparent, 0.3);
+
+// Breakpoints
+$breakpoints: (
+  base: 0,
+  xs: 376px,
+  small: 576px,
+  medium: 768px,
+  large: 1024px,
+  xl: 1280px,
+  xxl: 1440px,
+);
+
+$container-marginX: (
+  auto: auto,
+  base: 24px,
+  desktop: 40px,
+);
+
+// TODO after styling the header, verify the height measurement
+$header-height: (
+  sm: 7.25rem,
+  md: 7.25rem,
+  lg: 7.25rem,
+);
+
+$home-navbar-height: (
+  sm: 6.25rem,
+  md: 6rem,
+  lg: 7.75rem,
+);
