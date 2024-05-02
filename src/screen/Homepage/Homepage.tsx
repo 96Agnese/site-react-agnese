@@ -14,11 +14,7 @@ const Homepage = () => {
       </div>
 
       <h3 className={styles["homepage__title"]}>About me</h3>
-      <p className={styles["homepage__subtitle"]}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque, assumenda,
-        repellat in adipisci ut esse sed soluta ducimus culpa nisi dolorem eveniet quia autem earum
-        quae totam molestiae odit!
-      </p>
+      <p className={styles["homepage__subtitle"]}>Descrizione</p>
 
       <h3 className={styles["homepage__title"]}>My skills</h3>
       <div className={styles["homepage__inline-circle"]}>
