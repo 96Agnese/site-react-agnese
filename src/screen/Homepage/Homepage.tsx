@@ -7,10 +7,10 @@ const Homepage = () => {
     <div className={styles["homepage"]}>
       <div className={styles["homepage__inline"]}>
         <img className={styles["homepage__img"]} src={img} alt="" />
-        <h1 className={styles["homepage__presentation"]}>
+        <h2 className={styles["homepage__presentation"]}>
           Hi there! My name in Agnese and i'm{" "}
           <span className={styles["homepage__strong"]}>frontend developer</span>
-        </h1>
+        </h2>
       </div>
 
       <h3 className={styles["homepage__title"]}>About me</h3>
