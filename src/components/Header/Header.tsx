@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import { Link, Route, Routes } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 const Header = () => {
   const [onChange, setOnChange] = useState(false);
@@ -17,7 +21,7 @@ const Header = () => {
       <nav className={styles["header__nav"]}>
         <Link to="/">Homepage</Link>
         <Link to="/contact">Contatti</Link>
-        <Link to="/project">Progetti</Link>
+        <a href="#carousel">Progetti</a>
         <Link to="/project">Blog</Link>
       </nav>
 

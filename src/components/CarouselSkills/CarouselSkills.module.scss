@@ -1,0 +1,50 @@
+.carousel-skills {
+  display: flex;
+  flex-direction: column;
+
+  &__container-blu {
+    color: #fff;
+    line-height: 16px;
+    padding: 50px;
+    background-color: #036c9a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    @media only screen and (max-width: 720px) {
+      height: 60vh;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title-icon {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__color-icon {
+    font-size: 16px;
+    color: #19a9e7;
+  }
+
+  &__space-circle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    @media only screen and (max-width: 900px) {
+      overflow-x: scroll;
+    }
+  }
+}
+
+:global {
+  .slick-arrow slick-next {
+    color: black;
+  }
+}

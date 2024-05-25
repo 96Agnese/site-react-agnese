@@ -2,67 +2,107 @@
   &__img {
     height: 400px;
     opacity: 0.8;
+    border-radius: 20%;
 
     @media only screen and (max-width: 720px) {
-      height: 200px;
+      height: 300px;
     }
   }
 
-  &__inline {
+  &__inline-header {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 32px;
     padding-inline: 48px;
+    padding-block: 48px;
+
+    @media only screen and (max-width: 450px) {
+      flex-direction: column;
+
+      padding-inline: 16px;
+    }
   }
 
   &__presentation {
-    line-height: 1.5;
+    font-size: 32px;
     @media only screen and (max-width: 720px) {
       font-size: 16px;
     }
   }
 
   &__strong {
-    color: #2b60d7;
+    color: #19a9e7;
   }
 
   &__title {
-    text-align: center;
-    font-size: 24px;
+    text-align: left;
+    font-size: 32px;
+    padding-inline: 48px;
   }
 
   &__subtitle {
-    text-align: center;
-    padding-inline: 200px;
-    padding-bottom: 48px;
-  }
-
-  &__circle {
-    height: 24px;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 32px;
-    font-size: 16px;
-    background-color: #2b60d7;
+    padding-inline: 200px;
+    padding-block: 48px;
 
     @media only screen and (max-width: 720px) {
-      height: 16px;
-      font-size: 12px;
-      padding: 16px;
+      padding-inline: 16px;
     }
   }
-  &__inline-circle {
+
+  // ABOUT ME
+  &__container-about-me {
     display: flex;
-    gap: 24px;
     align-items: center;
     justify-content: center;
+  }
+
+  &__container-info {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    &__inline {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__key {
+      font-weight: bold;
+      color: #19a9e7;
+    }
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 450px) {
+      padding-inline: 16px;
+    }
+  }
+
+  &__img-center {
+    border-radius: 100px;
+    height: 200px;
+  }
+
+  // SKILLS
+
+  &__align-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding-block: 48px;
 
     @media only screen and (max-width: 720px) {
-      gap: 8px;
+      flex-wrap: wrap;
+      padding-inline: 16px;
     }
   }
 }
