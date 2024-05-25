@@ -11,7 +11,7 @@ import {
 import styles from "./CarouselSkills.module.scss";
 
 const CarouselSkills: React.FC = () => (
-  <Carousel effect="fade" className={styles["carousel-skills"]} arrows>
+  <Carousel effect="fade" className={styles["carousel-skills"]} autoplay arrows>
     <div>
       <div className={styles["carousel-skills__container-blu"]}>
         <div className={styles["carousel-skills__title-icon"]}>
