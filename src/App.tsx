@@ -8,14 +8,14 @@ import Contact from "./screen/Contact/Contact";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/project" element={<Project />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

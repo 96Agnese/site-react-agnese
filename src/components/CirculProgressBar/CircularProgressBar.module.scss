@@ -1,0 +1,13 @@
+.circular-progress {
+  color: white;
+  // min-height: 80px !important;
+}
+
+:global {
+  .ant-progress-text {
+    color: white !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 800 !important;
+  }
+}
