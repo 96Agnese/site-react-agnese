@@ -33,9 +33,9 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    top: 80px;
+    top: 70px;
     right: 0;
-    background-color: #2b60d7; /* Sfondo bianco */
+    background-color: #19a9e7; /* Sfondo bianco */
     border-radius: 16px;
     padding: 24px;
     margin: 16px;
@@ -53,6 +53,7 @@
     @media only screen and (max-width: 720px) {
       display: block;
       cursor: pointer;
+      color: white !important;
     }
   }
 
