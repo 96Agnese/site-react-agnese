@@ -1,4 +1,5 @@
 .homepage {
+  background-color: #cae9ff;
   &__img {
     height: 400px;
     opacity: 0.8;
@@ -16,6 +17,7 @@
     gap: 32px;
     padding-inline: 48px;
     padding-block: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     @media only screen and (max-width: 450px) {
       flex-direction: column;
@@ -32,12 +34,14 @@
   }
 
   &__strong {
-    color: #19a9e7;
+    color: #5fa8d3;
   }
 
   &__title {
     text-align: left;
     font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     padding-inline: 48px;
   }
 
@@ -48,6 +52,8 @@
     justify-content: center;
     padding-inline: 200px;
     padding-block: 48px;
+    line-height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     @media only screen and (max-width: 720px) {
       padding-inline: 16px;
@@ -74,7 +80,7 @@
 
     &__key {
       font-weight: bold;
-      color: #19a9e7;
+      color: #036c9a;
     }
     @media only screen and (max-width: 1024px) {
       flex-direction: column;
