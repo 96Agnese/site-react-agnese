@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Header.module.scss";
-import { Link, Route, Routes } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import menuwhite from "../../assets/icons/menu-white.png";
 
 const Header = () => {
   const [onChange, setOnChange] = useState(false);
@@ -25,9 +22,14 @@ const Header = () => {
         <Link to="/project">Blog</Link>
       </nav>
 
-      <button onClick={Menu} className={styles["header__icon"]}>
-        icona
-      </button>
+      <img
+        className={styles["header__icon"]}
+        onClick={Menu}
+        src={menuwhite}
+        alt=""
+        height={24}
+        width={24}
+      />
 
       {onChange && (
         <div className={styles["header__container-mobile"]}>

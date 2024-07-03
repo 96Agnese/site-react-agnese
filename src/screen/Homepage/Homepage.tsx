@@ -14,6 +14,7 @@ import js from "../../assets/icons/js.png";
 import b from "../../assets/icons/b.png";
 import figma from "../../assets/icons/figma.png";
 import flutter from "../../assets/icons/flutter.png";
+import wordpress from "../../assets/icons/wordpress.png";
 // info
 import location from "../../assets/info/location.png";
 import birthday from "../../assets/info/birthday.png";
@@ -25,6 +26,7 @@ import house from "../../assets/info/house.png";
 import user from "../../assets/info/user.png";
 // io
 import io from "../../assets/cvimage.jpg";
+import TimelineExperience from "../../components/Timeline/Timeline";
 
 const Homepage = () => {
   return (
@@ -36,11 +38,11 @@ const Homepage = () => {
           <h2 className={styles["homepage__presentation"]}>My name in Agnese Morlin and i'm</h2>
           <span className={styles["homepage__strong"]}>Frontend Developer</span>
           <h2 className={styles["homepage__presentation"]}>
-            and <span className={styles["homepage__strong"]}>Social media</span>{" "}
+            and <span className={styles["homepage__strong"]}>Social media manager</span>{" "}
           </h2>
         </h2>
       </div>
-      <h3 className={styles["homepage__title"]}>ABOUT ME</h3>
+      <h3 className={styles["homepage__title"]}>CHI SONO</h3>
       <div className={styles["homepage__container-about-me"]}>
         <div className={styles["homepage__container-info"]}>
           <div>
@@ -86,7 +88,7 @@ const Homepage = () => {
             <div className={styles["homepage__container-info__inline"]}>
               <img src={gmail} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>Email:</p>
-              <a href="agnesemorlin@gmail.com">Agnese Morlin</a>
+              <a href="mailto:agnesemorlin@gmail.com">Agnese Morlin</a>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
@@ -102,10 +104,11 @@ const Homepage = () => {
         <p className={styles["homepage__subtitle"]}>
           Il tutto è iniziato con il framework Flutter dove l'ho l'imparato grazie a un bando
           regionale nel 2021 e da li piano piano mi sono appasionata del tech world. Ho iniziato a
-          voler imparare a programmare ed ora eccomi qui !
+          voler imparare a programmare ed ora eccomi qui ! La passione per i social invece è da
+          sempre ho sempre avuto quella passione per raccontare quello che mi succedeva.
         </p>
       </div>
-      <h3 className={styles["homepage__title"]}>SKILLS</h3>
+      <h3 className={styles["homepage__title"]}>ABILITA'</h3>
       <div id="carousel">
         <CarouselSkills />
       </div>
@@ -119,9 +122,14 @@ const Homepage = () => {
         <img src={b} alt="20" height={70} />
         <img src={figma} alt="20" height={70} />
         <img src={flutter} alt="20" height={70} />
+        <img src={wordpress} alt="20" height={70} />
       </div>
 
-      <h3 className={styles["homepage__title"]}>WORK EXPERIENCE</h3>
+      <h3 className={styles["homepage__title"]}>ESPERIENZE</h3>
+
+      <TimelineExperience />
+
+      <h3 className={styles["homepage__title"]}>ISTRUZIONE</h3>
     </div>
   );
 };
