@@ -26,7 +26,8 @@ import house from "../../assets/info/house.png";
 import user from "../../assets/info/user.png";
 // io
 import io from "../../assets/cvimage.jpg";
-import TimelineExperience from "../../components/Timeline/Timeline";
+import TimelineExperience from "../../components/TimelineExperience/TimelineExperience";
+import TimelineInstruction from "../../components/TimerlineInstruction/TimelineInstruction";
 
 const Homepage = () => {
   return (
@@ -130,6 +131,8 @@ const Homepage = () => {
       <TimelineExperience />
 
       <h3 className={styles["homepage__title"]}>ISTRUZIONE</h3>
+
+      <TimelineInstruction />
     </div>
   );
 };

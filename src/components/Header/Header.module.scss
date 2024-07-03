@@ -1,5 +1,5 @@
 .header {
-  background-color: #19a9e7;
+  background-color: #5fa8d3;
   padding-block: 16px;
   padding-inline: 16px;
   display: flex;
@@ -12,6 +12,7 @@
 
   &__name {
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   nav {
@@ -26,6 +27,7 @@
     color: white;
     text-decoration: none;
     font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   &__container-mobile {
@@ -35,11 +37,11 @@
     gap: 16px;
     top: 70px;
     right: 0;
-    background-color: #19a9e7; /* Sfondo bianco */
+    background-color: #5fa8d3; /* Sfondo bianco */
     border-radius: 16px;
     padding: 24px;
-    margin: 16px;
-
+    margin-top: 16px;
+    z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   &__link {
