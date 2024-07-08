@@ -29,6 +29,10 @@ import io from "../../assets/cvimage.jpg";
 import TimelineExperience from "../../components/TimelineExperience/TimelineExperience";
 import TimelineInstruction from "../../components/TimerlineInstruction/TimelineInstruction";
 
+import splash from "../../assets/splash.png"
+
+const { Meta } = Card;
+
 const Homepage = () => {
   return (
     <div className={styles["homepage"]}>
@@ -109,10 +113,10 @@ const Homepage = () => {
           sempre ho sempre avuto quella passione per raccontare quello che mi succedeva.
         </p>
       </div>
-      <h3 className={styles["homepage__title"]}>ABILITA'</h3>
-      <div id="carousel">
+      <h3 id="skills" className={styles["homepage__title"]}>COMPETENZE</h3>
+    
         <CarouselSkills />
-      </div>
+      
       <div className={styles["homepage__align-skills"]}>
         <img src={html} alt="20" height={70} />
 
@@ -126,13 +130,27 @@ const Homepage = () => {
         <img src={wordpress} alt="20" height={70} />
       </div>
 
-      <h3 className={styles["homepage__title"]}>ESPERIENZE</h3>
+      <h3 id="experiences" className={styles["homepage__title"]}>ESPERIENZE</h3>
 
-      <TimelineExperience />
+<TimelineExperience />
 
-      <h3 className={styles["homepage__title"]}>ISTRUZIONE</h3>
+
+
+      <h3 id="istruction" className={styles["homepage__title"]}>ISTRUZIONE</h3>
 
       <TimelineInstruction />
+
+      <h3 id="projects" className={styles["homepage__title"]}>PROGETTI</h3>
+
+      <Card
+    hoverable
+    style={{ width: 240 }}
+    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+  >
+    <Meta title="Ehilapp" description="React Native" />
+  </Card>
+
+      <img src={splash} alt="" height={400}/>
     </div>
   );
 };
