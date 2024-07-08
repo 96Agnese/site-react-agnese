@@ -29,9 +29,9 @@ import io from "../../assets/cvimage.jpg";
 import TimelineExperience from "../../components/TimelineExperience/TimelineExperience";
 import TimelineInstruction from "../../components/TimerlineInstruction/TimelineInstruction";
 
-import splash from "../../assets/splash.png"
-
-const { Meta } = Card;
+import splash from "../../assets/splash.png";
+import chooseFriends from "../../assets/choosefriends.png";
+import opportunity from "../../assets/opportunity.png";
 
 const Homepage = () => {
   return (
@@ -39,12 +39,10 @@ const Homepage = () => {
       <div className={styles["homepage__inline-header"]}>
         <img className={styles["homepage__img"]} src={io2} alt="" />
         <h2 className={styles["homepage__presentation"]}>
-          Hello!
-          <h2 className={styles["homepage__presentation"]}>My name in Agnese Morlin and i'm</h2>
-          <span className={styles["homepage__strong"]}>Frontend Developer</span>
-          <h2 className={styles["homepage__presentation"]}>
-            and <span className={styles["homepage__strong"]}>Social media manager</span>{" "}
-          </h2>
+          Ciao! Mi chiamo Agnese e sono una{" "}
+          <span className={styles["homepage__strong"]}>Sviluppatrice web</span> con la passione per
+          la
+          <span className={styles["homepage__strong"]}> l'UI e UX</span>
         </h2>
       </div>
       <h3 className={styles["homepage__title"]}>CHI SONO</h3>
@@ -53,7 +51,7 @@ const Homepage = () => {
           <div>
             <div className={styles["homepage__container-info__inline"]}>
               <img src={user} height={24} width={24} alt="" />
-              <p className={styles["homepage__container-info__key"]}>Fullname:</p>
+              <p className={styles["homepage__container-info__key"]}>Nome:</p>
               <p>Agnese Morlin</p>
             </div>
             <div className={styles["homepage__container-info__inline"]}>
@@ -64,13 +62,13 @@ const Homepage = () => {
 
             <div className={styles["homepage__container-info__inline"]}>
               <img src={location} height={24} width={24} alt="" />
-              <p className={styles["homepage__container-info__key"]}>Location:</p>
+              <p className={styles["homepage__container-info__key"]}>Luogo:</p>
               <p>Nove, VI</p>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
               <img src={graduation} height={24} width={24} alt="" />
-              <p className={styles["homepage__container-info__key"]}>Study:</p>
+              <p className={styles["homepage__container-info__key"]}>Studi:</p>
               <p>Graduation Padua Dams</p>
             </div>
           </div>
@@ -80,26 +78,32 @@ const Homepage = () => {
           <div>
             <div className={styles["homepage__container-info__inline"]}>
               <img src={mountains} height={24} width={24} alt="" />
-              <p className={styles["homepage__container-info__key"]}>Interests:</p>
+              <p className={styles["homepage__container-info__key"]}>Interessi:</p>
               <p>Mountains, Running, Climbing</p>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
               <img src={github} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>GitHub:</p>
-              <a href="https://github.com/96Agnese">Agnese</a>
+              <a className="blu-color" href="https://github.com/96Agnese">
+                Agnese
+              </a>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
               <img src={gmail} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>Email:</p>
-              <a href="mailto:agnesemorlin@gmail.com">Agnese Morlin</a>
+              <a className="blu-color" href="mailto:agnesemorlin@gmail.com">
+                Agnese Morlin
+              </a>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
               <img src={house} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>Hobbies:</p>
-              <a href="http://www.parcodelsojo.it/">Parco del Sojo</a>
+              <a className="blu-color" href="http://www.parcodelsojo.it/">
+                Parco del Sojo
+              </a>
             </div>
           </div>
         </div>
@@ -109,14 +113,17 @@ const Homepage = () => {
         <p className={styles["homepage__subtitle"]}>
           Il tutto è iniziato con il framework Flutter dove l'ho l'imparato grazie a un bando
           regionale nel 2021 e da li piano piano mi sono appasionata del tech world. Ho iniziato a
-          voler imparare a programmare ed ora eccomi qui ! La passione per i social invece è da
-          sempre ho sempre avuto quella passione per raccontare quello che mi succedeva.
+          voler imparare a programmare ed ora eccomi qui ! La passione per il design e nata di
+          conseguenza con lo sviluppo e mi sta prendendo sempre più, dato che mi piacerebbe
+          approfondire l'esperienza utente.
         </p>
       </div>
-      <h3 id="skills" className={styles["homepage__title"]}>COMPETENZE</h3>
-    
-        <CarouselSkills />
-      
+      <h3 id="skills" className={styles["homepage__title"]}>
+        COMPETENZE
+      </h3>
+
+      <CarouselSkills />
+
       <div className={styles["homepage__align-skills"]}>
         <img src={html} alt="20" height={70} />
 
@@ -130,27 +137,62 @@ const Homepage = () => {
         <img src={wordpress} alt="20" height={70} />
       </div>
 
-      <h3 id="experiences" className={styles["homepage__title"]}>ESPERIENZE</h3>
+      <h3 id="experiences" className={styles["homepage__title"]}>
+        ESPERIENZE
+      </h3>
 
-<TimelineExperience />
+      <TimelineExperience />
 
-
-
-      <h3 id="istruction" className={styles["homepage__title"]}>ISTRUZIONE</h3>
+      <h3 id="istruction" className={styles["homepage__title"]}>
+        ISTRUZIONE
+      </h3>
 
       <TimelineInstruction />
 
-      <h3 id="projects" className={styles["homepage__title"]}>PROGETTI</h3>
+      <h3 id="projects" className={styles["homepage__title"]}>
+        PROGETTI
+      </h3>
 
-      <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Ehilapp" description="React Native" />
-  </Card>
+      {/* <Card hoverable cover={<img alt="ehilapp" src={splash} />}>
+        <Meta title="Ehilapp" description="React Native" />
+      </Card> */}
 
-      <img src={splash} alt="" height={400}/>
+      <div className={styles["homepage__direction"]}>
+        <div className={styles["homepage__card"]}>
+          <h2 className="white-color"> - Ehilapp</h2>
+          <h4 className="white-color">Caritas Diocesana Veronese e CISL-Verona</h4>
+          <div className={styles["homepage__inline"]}>
+            <img src={splash} alt="" height={200} />
+            <img src={chooseFriends} alt="" height={200} />
+            <img src={opportunity} alt="" height={200} />
+          </div>
+        </div>
+
+        <div className={styles["homepage__texts-ehilapp"]}>
+          <h1 style={{ color: "#036c9a" }}>Ehilapp</h1>
+          <p>
+            <span style={{ fontWeight: "bold", color: "#036c9a" }}>Anno:</span> 2022
+          </p>
+          <p>
+            {" "}
+            <span style={{ fontWeight: "bold", color: "#036c9a" }}>Azienda:</span> Rawfish
+          </p>
+          <p className={styles["homepage__desc-ehilapp"]}>
+            E' un’app creata in
+            <span style={{ fontWeight: "bold", color: "#036c9a", paddingLeft: 4, paddingRight: 4 }}>
+              React Native
+            </span>
+            con lo scopo di aiutare i cittadini a trovare i bonus, o le opportunità più vicine a
+            loro. Ogni utente può decidere quale seguire tra i 7 amici presenti, semplicemente
+            accendendo o spegnendo la relativa icona. All’interno dell’app il cittadino sarà in
+            grado di visionare le opportunità non solo dello Stato italiano, ma anche del proprio
+            Comune di residenza.
+          </p>
+          <a style={{ color: "#036c9a" }} href="https://ehilapp.it/">
+            Scarica anche tu l'app!
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
