@@ -16,10 +16,12 @@ const Header = () => {
         <p className={styles["header__name"]}>Agnese | Portfolio</p>
       </div>
       <nav className={styles["header__nav"]}>
-        <Link to="/">Homepage</Link>
-        <Link to="/contact">Contatti</Link>
-        <a href="#carousel">Progetti</a>
-        <Link to="/project">Blog</Link>
+       
+        <a href="#skills">Competenze</a>
+        <a href="#experiences">Esperienze</a>
+        <a href="#istruction">Istruzione</a>
+        <a href="#projects">Progetti</a>
+
       </nav>
 
       <img
@@ -33,15 +35,18 @@ const Header = () => {
 
       {onChange && (
         <div className={styles["header__container-mobile"]}>
-          <Link className={styles["header__link"]} to="/contact">
-            Contatti
-          </Link>
-          <Link className={styles["header__link"]} to="/project">
+          <a className={styles["header__link"]} href="#skills">
+            Competenze
+          </a>
+          <a className={styles["header__link"]} href="#experiences">
+            Esperienze
+          </a>
+          <a className={styles["header__link"]} href="#istruction">
+            Istruzione
+          </a>
+          <a className={styles["header__link"]} href="#projects">
             Progetti
-          </Link>
-          <Link className={styles["header__link"]} to="/project">
-            Blog
-          </Link>
+          </a>
         </div>
       )}
     </div>
