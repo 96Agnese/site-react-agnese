@@ -12,16 +12,21 @@ const Header = () => {
 
   return (
     <div className={styles["header"]}>
-      <div>
-        <p className={styles["header__name"]}>Agnese | Portfolio</p>
-      </div>
-      <nav className={styles["header__nav"]}>
-       
-        <a href="#skills">Competenze</a>
-        <a href="#experiences">Esperienze</a>
-        <a href="#istruction">Istruzione</a>
-        <a href="#projects">Progetti</a>
+      <p className={styles["header__name"]}>Agnese | Portfolio</p>
 
+      <nav className={styles["header__nav"]}>
+        <a className={styles["header__link"]} href="#skills">
+          Competenze
+        </a>
+        <a className={styles["header__link"]} href="#experiences">
+          Esperienze
+        </a>
+        <a className={styles["header__link"]} href="#istruction">
+          Istruzione
+        </a>
+        <a className={styles["header__link"]} href="#projects">
+          Progetti
+        </a>
       </nav>
 
       <img
@@ -36,16 +41,16 @@ const Header = () => {
       {onChange && (
         <div className={styles["header__container-mobile"]}>
           <a className={styles["header__link"]} href="#skills">
-            Competenze
+            - Competenze
           </a>
           <a className={styles["header__link"]} href="#experiences">
-            Esperienze
+            - Esperienze
           </a>
           <a className={styles["header__link"]} href="#istruction">
-            Istruzione
+            - Istruzione
           </a>
           <a className={styles["header__link"]} href="#projects">
-            Progetti
+            - Progetti
           </a>
         </div>
       )}

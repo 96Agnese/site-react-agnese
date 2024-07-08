@@ -1,9 +1,10 @@
 .homepage {
   background-color: #cae9ff;
+
   &__img {
     height: 400px;
     opacity: 0.8;
-    border-radius: 20%;
+    border-radius: 50%;
 
     @media only screen and (max-width: 720px) {
       height: 300px;
@@ -15,26 +16,33 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
-    padding-inline: 48px;
+    padding-inline: 200px;
     padding-block: 48px;
+    padding-top: 100px;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    @media only screen and (max-width: 450px) {
-      flex-direction: column;
+    @media only screen and (max-width: 1024px) {
+      padding-inline: 100px;
+    }
 
+    @media only screen and (max-width: 750px) {
+      flex-direction: column;
       padding-inline: 16px;
+      padding-top: 40px;
     }
   }
 
   &__presentation {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 40px;
     @media only screen and (max-width: 720px) {
       font-size: 16px;
     }
   }
 
   &__strong {
-    color: #5fa8d3;
+    color: #036c9a;
   }
 
   &__title {
@@ -110,5 +118,64 @@
       flex-wrap: wrap;
       padding-inline: 16px;
     }
+  }
+
+  // PROGETTI
+
+  &__direction {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+    margin-inline: 100px;
+
+    @media only screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-inline: 16px;
+    }
+  }
+
+  &__inline {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    @media only screen and (max-width: 530px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__texts-ehilapp {
+    @media only screen and (max-width: 1024px) {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-inline: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__card {
+    background-color: #5fa8d3;
+    border-radius: 16px;
+    padding: 32px;
+
+    margin-bottom: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    @media only screen and (max-width: 600px) {
+      padding: 16px;
+    }
+  }
+
+  &__card:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(1.03);
+  }
+
+  &__desc-ehilapp {
+    line-height: 25px;
   }
 }

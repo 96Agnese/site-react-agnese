@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <Header />
+
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
