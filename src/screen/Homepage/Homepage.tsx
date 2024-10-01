@@ -25,7 +25,8 @@ import gmail from "../../assets/info/gmail.png";
 import house from "../../assets/info/house.png";
 import user from "../../assets/info/user.png";
 // io
-import io from "../../assets/cvimage.jpg";
+import iocut from "../../assets/iocut.jpg";
+import cvimage from "../../assets/cvimage.jpg";
 import TimelineExperience from "../../components/TimelineExperience/TimelineExperience";
 import TimelineInstruction from "../../components/TimerlineInstruction/TimelineInstruction";
 
@@ -37,12 +38,11 @@ const Homepage = () => {
   return (
     <div className={styles["homepage"]}>
       <div className={styles["homepage__inline-header"]}>
-        <img className={styles["homepage__img"]} src={io2} alt="" />
+        <img className={styles["homepage__img"]} src={cvimage} alt="" />
         <h2 className={styles["homepage__presentation"]}>
           Ciao! Mi chiamo Agnese e sono una{" "}
-          <span className={styles["homepage__strong"]}>Sviluppatrice web</span> con la passione per
-          la
-          <span className={styles["homepage__strong"]}> l'UI e UX</span>
+          <span className={styles["homepage__strong"]}>Sviluppatrice web</span> e una 
+         <span className={styles["homepage__strong"]}> social media manager</span>
         </h2>
       </div>
       <h3 className={styles["homepage__title"]}>CHI SONO</h3>
@@ -69,17 +69,17 @@ const Homepage = () => {
             <div className={styles["homepage__container-info__inline"]}>
               <img src={graduation} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>Studi:</p>
-              <p>Graduation Padua Dams</p>
+              <p>Università degli studi di Padova</p>
             </div>
           </div>
 
-          <img src={io} className={styles["homepage__img-center"]} alt="" />
+          <img src={iocut} className={styles["homepage__img-center"]} alt="" />
 
           <div>
             <div className={styles["homepage__container-info__inline"]}>
               <img src={mountains} height={24} width={24} alt="" />
               <p className={styles["homepage__container-info__key"]}>Interessi:</p>
-              <p>Mountains, Running, Climbing</p>
+              <p>Montagna, Corsa, Arrampicata</p>
             </div>
 
             <div className={styles["homepage__container-info__inline"]}>
@@ -109,15 +109,15 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div>
+  
         <p className={styles["homepage__subtitle"]}>
           Il tutto è iniziato con il framework Flutter dove l'ho l'imparato grazie a un bando
           regionale nel 2021 e da li piano piano mi sono appasionata del tech world. Ho iniziato a
-          voler imparare a programmare ed ora eccomi qui ! La passione per il design e nata di
-          conseguenza con lo sviluppo e mi sta prendendo sempre più, dato che mi piacerebbe
-          approfondire l'esperienza utente.
+          voler imparare a programmare ed ora eccomi qui ! La passione per i social invece nasce fin da ragazzina 
+          a voler sperimentare il mondo del marketing, delle strategie e cosi ho iniziato con il Parco del sojo
+           
         </p>
-      </div>
+     
       <h3 id="skills" className={styles["homepage__title"]}>
         COMPETENZE
       </h3>
