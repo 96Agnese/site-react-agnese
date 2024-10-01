@@ -1,10 +1,11 @@
 .homepage {
-  background-color: #cae9ff;
+  // background-color: #cae9ff;
 
   &__img {
     height: 400px;
-    opacity: 0.8;
+  
     border-radius: 50%;
+    
 
     @media only screen and (max-width: 720px) {
       height: 300px;
@@ -53,7 +54,7 @@
     padding-inline: 48px;
   }
 
-  &__subtitle {
+  &__subtitle   {
     display: flex;
     text-align: center;
     align-items: center;
@@ -68,6 +69,7 @@
     }
   }
 
+ 
   // ABOUT ME
   &__container-about-me {
     display: flex;

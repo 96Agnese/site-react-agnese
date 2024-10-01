@@ -1,17 +1,19 @@
 .header {
-  background-color: #5fa8d3;
+ 
   padding-block: 16px;
   padding-inline: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // width: 100%;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 9999;
+  background-color: white;
+  box-shadow: none; 
+  transition: box-shadow 0.3s ease; 
 
   &__name {
-    color: white;
+    color: black;
   }
 
   nav {
@@ -23,55 +25,72 @@
     }
   }
 
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    &:hover {
-      text-decoration: underline;
-      color: #036c9a;
-      font-weight: bold;
-    }
-  }
-
   &__container-mobile {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    top: 70px;
+    width: 100%;
+    top: 64px;
     right: 0;
-    background-color: #5fa8d3; /* Sfondo bianco */
-    border-radius: 16px;
-    padding: 24px;
+    left: 0;
+    background-color: #131313;
+    // padding: 24px;
     margin-top: 16px;
-    margin-right: 16px;
     z-index: 999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 0; // Inizialmente chiuso
+    overflow: hidden; // Nasconde il contenuto in eccesso
+    transition: max-height 0.8s ease; // Aggiungi transizione
+
+    &.open {
+      max-height: 400px; // Valore grande per garantire che il contenuto venga visualizzato
+    }
   }
-  &__link {
+
+
+  &__link  {
+    color: black;
+    font-size: 16px;
+    padding-block: 16px;
+    text-decoration: none;
+      font-size: 16px;
+   
+
+      &:hover {
+            font-weight: bold;
+          }
+  }
+
+
+  &__link-mobile {
+    font-size: 16px;
+    padding-block: 16px;
+    padding-inline: 16px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+
+    &:hover {
+      background-color: #282828,
+    }
   }
 
   &__icon {
     display: none;
-
     @media only screen and (max-width: 720px) {
       display: block;
       cursor: pointer;
-      color: white !important;
     }
   }
 
-  a:hover {
-    text-decoration: underline "#036c9a";
-    color: "#036c9a";
-  }
+ 
+
 }
+
+.header.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Imposta il box-shadow che vuoi vedere quando scrolli
+}
+
 
 .me-auto {
   background-color: red;
