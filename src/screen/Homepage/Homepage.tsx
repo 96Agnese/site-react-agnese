@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./Homepage.module.scss";
 import io2 from "../../assets/io2.jpg";
 import { Card } from "antd";
@@ -33,19 +33,41 @@ import TimelineInstruction from "../../components/TimerlineInstruction/TimelineI
 import splash from "../../assets/splash.png";
 import chooseFriends from "../../assets/choosefriends.png";
 import opportunity from "../../assets/opportunity.png";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { Reveal } from "../../components/Reveal/Reveal";
 
 const Homepage = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  // const ref = useRef(null);
+  // const inView = useInView(ref, { once: true });
+  // const mainControl = useAnimation();
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     mainControl.start("visible");
+  //   }
+  // }, [inView]);
+
   return (
     <div className={styles["homepage"]}>
       <div className={styles["homepage__inline-header"]}>
         <img className={styles["homepage__img"]} src={cvimage} alt="" />
-        <h2 className={styles["homepage__presentation"]}>
-          Ciao! Mi chiamo Agnese e sono una{" "}
-          <span className={styles["homepage__strong"]}>Sviluppatrice web</span> e una 
-         <span className={styles["homepage__strong"]}> social media manager</span>
-        </h2>
+        <Reveal>
+          <h2 className={styles["homepage__presentation"]}>
+            Ciao! Mi chiamo Agnese e sono una{" "}
+            <span className={styles["homepage__strong"]}>Sviluppatrice web</span> e una
+            <span className={styles["homepage__strong"]}> social media manager</span>
+          </h2>
+        </Reveal>
       </div>
-      <h3 className={styles["homepage__title"]}>CHI SONO</h3>
+
+      <Reveal>
+        <h3 className={styles["homepage__title"]}>CHI SONO</h3>
+      </Reveal>
       <div className={styles["homepage__container-about-me"]}>
         <div className={styles["homepage__container-info"]}>
           <div>
@@ -109,19 +131,20 @@ const Homepage = () => {
         </div>
       </div>
 
-  
+      <Reveal>
         <p className={styles["homepage__subtitle"]}>
           Il tutto è iniziato con il framework Flutter dove l'ho l'imparato grazie a un bando
           regionale nel 2021 e da li piano piano mi sono appasionata del tech world. Ho iniziato a
-          voler imparare a programmare ed ora eccomi qui ! La passione per i social invece nasce fin da ragazzina 
-          a voler sperimentare il mondo del marketing, delle strategie e cosi ho iniziato con il Parco del sojo
-           
+          voler imparare a programmare ed ora eccomi qui ! La passione per i social invece nasce fin
+          da ragazzina a voler sperimentare il mondo del marketing, delle strategie e cosi ho
+          iniziato con il Parco del sojo
         </p>
-     
-      <h3 id="skills" className={styles["homepage__title"]}>
-        COMPETENZE
-      </h3>
-
+      </Reveal>
+      <Reveal>
+        <h3 id="skills" className={styles["homepage__title"]}>
+          COMPETENZE
+        </h3>
+      </Reveal>
       <CarouselSkills />
 
       <div className={styles["homepage__align-skills"]}>
@@ -137,22 +160,26 @@ const Homepage = () => {
         <img src={wordpress} alt="20" height={70} />
       </div>
 
-      <h3 id="experiences" className={styles["homepage__title"]}>
-        ESPERIENZE
-      </h3>
+      <Reveal>
+        <h3 id="experiences" className={styles["homepage__title"]}>
+          ESPERIENZE
+        </h3>
+      </Reveal>
 
       <TimelineExperience />
 
-      <h3 id="istruction" className={styles["homepage__title"]}>
-        ISTRUZIONE
-      </h3>
-
+      <Reveal>
+        <h3 id="istruction" className={styles["homepage__title"]}>
+          ISTRUZIONE
+        </h3>
+      </Reveal>
       <TimelineInstruction />
 
-      <h3 id="projects" className={styles["homepage__title"]}>
-        PROGETTI
-      </h3>
-
+      <Reveal>
+        <h3 id="projects" className={styles["homepage__title"]}>
+          PROGETTI
+        </h3>
+      </Reveal>
       {/* <Card hoverable cover={<img alt="ehilapp" src={splash} />}>
         <Meta title="Ehilapp" description="React Native" />
       </Card> */}
